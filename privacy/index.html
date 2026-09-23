@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Vaktcentralen – Mailvakten.">
+  <title>Privacy Policy · Vaktcentralen – Mailvakten</title>
+  <style>
+    :root { color-scheme: dark; --bg:#0d1117; --panel:#151b23; --text:#e6edf3; --muted:#9da7b3; --line:#2a333f; --accent:#d5ad67; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { width:min(780px,calc(100% - 40px)); margin:0 auto; padding:58px 0; }
+    a { color:var(--accent); text-underline-offset:3px; }
+    h1 { font-size:clamp(2rem,6vw,3.1rem); letter-spacing:-.035em; line-height:1.08; margin:.25rem 0 .5rem; }
+    h2 { margin:2.2rem 0 .45rem; font-size:1.22rem; }
+    p, li { color:#d7dde4; }
+    .muted { color:var(--muted); }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:28px; margin:28px 0; }
+    code { background:#202833; padding:.12rem .35rem; border-radius:.35rem; }
+    footer { border-top:1px solid var(--line); margin-top:42px; padding-top:22px; color:var(--muted); font-size:.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="/">← Vaktcentralen – Mailvakten</a></p>
+    <h1>Privacy Policy</h1>
+    <p class="muted">Last updated: 23 September 2026</p>
+
+    <div class="card">
+      <p><strong>Vaktcentralen – Mailvakten</strong> is a privately operated email-delivery monitoring service. This policy explains how Mailvakten accesses, uses, stores, and shares Google user data when a Gmail account is connected to the service.</p>
+    </div>
+
+    <h2>Google data Mailvakten accesses</h2>
+    <p>Mailvakten uses Google OAuth and the Gmail API. Its requested Gmail permissions are limited to the functionality needed to:</p>
+    <ul>
+      <li>search for expected messages in the authorized Gmail account, including Spam and Trash;</li>
+      <li>read message metadata needed to identify a message, such as RFC822 Message-ID, date, and selected addressing headers;</li>
+      <li>import an original RFC822 message into Gmail when that message is confirmed missing from an intended destination.</li>
+    </ul>
+    <p>The application currently requests the Gmail scopes <code>gmail.readonly</code> and <code>gmail.insert</code>.</p>
+
+    <h2>How Google user data is used</h2>
+    <p>Google user data is used only to verify whether expected forwarded email has arrived and, when necessary, to repair a failed delivery by importing the corresponding original message into the authorized Gmail account.</p>
+    <p>Mailvakten does not use Google user data for advertising, marketing, profiling, sale of data, or training generalized AI or machine-learning models.</p>
+
+    <h2>Data storage</h2>
+    <p>Mailvakten stores only the operational information required for monitoring and message matching. Gmail message bodies are not persistently stored as part of normal monitoring. When a missing message is repaired, the original message is obtained from the configured source mailbox, held in memory for the import operation, and sent to Gmail.</p>
+    <p>For unattended operation, the Google OAuth refresh token is stored locally on the machine running Mailvakten and protected using Windows Data Protection API (DPAPI) machine-scope encryption. OAuth access tokens are short-lived and are not persistently stored. The OAuth client credentials and other protected secrets are stored locally in access-restricted protected storage.</p>
+
+    <h2>Data sharing and disclosure</h2>
+    <p>Mailvakten does not sell Google user data and does not share Google user data with third parties for advertising, marketing, analytics, or other unrelated purposes. Data is processed only as required to provide the email-delivery monitoring and repair functionality described above.</p>
+
+    <h2>Human access</h2>
+    <p>Mailvakten is designed for automated operation. It does not provide third parties with human access to Gmail data. Any direct access by the operator is limited to administration, troubleshooting, security, or maintenance of the privately operated service.</p>
+
+    <h2>Security</h2>
+    <p>Mailvakten uses OAuth 2.0 for Gmail authorization. Stored refresh tokens are protected locally with Windows DPAPI, and the protected secret storage is restricted by Windows access controls. The service is designed to minimize persistent storage of email content.</p>
+
+    <h2>Retention and deletion</h2>
+    <p>Operational monitoring records may be retained locally to support delivery history and service operation. Gmail message content is not persistently copied into Mailvakten during normal monitoring or automatic repair. OAuth access can be revoked at any time from the connected Google Account. Local authorization credentials can then be removed from the machine running Mailvakten.</p>
+
+    <h2>Google API Services User Data Policy</h2>
+    <p>Mailvakten's use and transfer of information received from Google APIs is limited to providing the functionality described in this policy and is intended to comply with the Google API Services User Data Policy, including its Limited Use requirements.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>This policy may be updated if Mailvakten's functionality or handling of Google user data changes. The current version will be published at this URL with an updated revision date.</p>
+
+    <footer>
+      Vaktcentralen – Mailvakten · <a href="/">Home</a>
+    </footer>
+  </main>
+</body>
+</html>
